@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <!--Mendefinisikan style css untuk kotak-->
+    <style>
+        .kotak{
+            width: 220px;
+            height: 130px;
+            background-color: yellow;
+        }
+    </style>
+    <!--Menambahkan library jQuery ke halaman-->
+    <script src="jquery-3.6.3.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        //saat elemen dengan class .sembunyi di klik, jalankan fungsi yang menyembunyikan kotak dengan animasi fade out yang berdurasi lambat
+        $(".sembunyi").click(function () { $("#kotak").fadeOut()("slow");});
+        //saat elemen dengan class .tampil di klik, jalankan fungsi yang menampilkan kotak dengan animasi fade in yang berdurasi lambat
+        $(".tampil").click(function () { $("#kotak").fadeIn()("slow");});
+        //saat elemen dengan class .samar di klik
+        //jalankan fungsi yang membuat kotak menjadi samar (berdurasi 1000ms dan opacity 0.3)dengan animasi fade to yang berdurasi lambat
+        $(".samar").click(function () { $("#kotak").fadeTo(1000, 0.3)("slow");});
+      });
+    </script>
+  </head>
+  <body>
+    <!--menambahkan sebuah div dengan id kotak dan class .kotak-->
+    <div id="kotak" class="kotak"></div>
+    <br>
+    <button class="sembunyi">Fade Out</button><!--membuat tombol untuk di klik-->
+    <button class="tampil">Fade In</button>
+    <button class="samar">Fade To 0.3</button>
+  </body>
+</html>

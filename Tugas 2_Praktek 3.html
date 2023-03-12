@@ -1,0 +1,43 @@
+<html>
+<head>
+    <!--Mendefinisikan style css untuk kotak-->
+    <style>
+        .kotak{
+            width: 75px;
+            height: 75px;
+            margin-right: 20px;
+            background-color: yellow;
+            float: left;
+        }
+        /*Mendefinisikan style css untuk warna kotak*/
+        .warna1{background-color: blue;}
+        .warna2{background-color: orange;}
+        .warna3{background-color: green;}
+        .warna4{background-color: red;}
+    </style>
+
+    <!--Menambahkan library jQuery ke halaman-->
+    <script type="text/javascript" src="jquery-3.6.3.min.js"></script>
+    <!--Membuat script untuk mengubah warna kotak-->
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $('#kotak1').dblclick(function (){$('#kotak1').addClass('warna1');});
+            $('#kotak2').dblclick(function (){$('#kotak2').addClass('warna2');});
+            $('#kotak3').dblclick(function (){$('#kotak3').addClass('warna3');});
+            $('#kotak4').dblclick(function (){$('#kotak4').addClass('warna4');});
+        });
+
+    </script>
+</head>
+
+<body>
+    <!--Menampilkan instruksi untuk mengubah warna kotak-->
+    klik 2x pada setiap kotak untuk mengubah warnanya
+    <br><br>
+    <!--Menambahkan kotak-kotak-->
+    <div id="kotak1" class="kotak"></div>
+    <div id="kotak2" class="kotak"></div>
+    <div id="kotak3" class="kotak"></div>
+    <div id="kotak4" class="kotak"></div>
+</body>
+</html>
